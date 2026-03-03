@@ -5,82 +5,102 @@
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Linagra Instalaciones SLU</title>
 <meta name="description" content="Instalaciones, fontanería, calderas y repuestos en Linares." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css" />
 </head>
-
 <body>
 
-<div class="bg-glow"></div>
+<div class="background-grid"></div>
 
 <header class="header">
-  <div class="wrap nav">
-    <div class="logo">Linagra <span>Instalaciones SLU</span></div>
-    <a class="btn-liquid" href="tel:686284561">Llamar</a>
+  <div class="container nav">
+    <div class="logo">Linagra<span>.</span></div>
+    <div class="nav-cta">
+      <a class="btn-outline" href="#contacto">Ubicación</a>
+      <a class="btn-primary" href="tel:686284561">Llamar</a>
+    </div>
   </div>
 </header>
 
 <section class="hero">
-  <div class="wrap hero-content">
-    <h1 class="fade-up">
-      Instalaciones y soluciones técnicas <span class="gradient-text">con garantía profesional</span>
-    </h1>
-    <p class="fade-up delay-1">
-      Fontanería · Calderas · Calentadores · Repuestos · Urgencias
-    </p>
+  <div class="container hero-grid">
 
-    <div class="hero-buttons fade-up delay-2">
-      <a class="btn-liquid big" href="tel:686284561">Llamar ahora</a>
-      <a class="btn-outline" href="#contacto">Ver ubicación</a>
+    <div class="hero-left">
+      <h1>
+        Instalaciones técnicas<br>
+        <span class="gradient">con garantía profesional</span>
+      </h1>
+
+      <p>
+        Fontanería · Calderas · Calentadores · Repuestos · Urgencias en Linares.
+      </p>
+
+      <div class="hero-buttons">
+        <a class="btn-primary large" href="tel:686284561">686 28 45 61</a>
+        <a class="btn-ghost" href="#servicios">Ver servicios</a>
+      </div>
+
+      <div class="badges">
+        <span>✔ Profesionales</span>
+        <span>✔ Puntuales</span>
+        <span>✔ Tienda física</span>
+      </div>
     </div>
 
-    <div class="info-card fade-up delay-3">
-      <h3>Información</h3>
-      <p><strong>Dirección:</strong> C. Espronceda, 2 · Linares</p>
-      <p><strong>Horario:</strong> L-V 8:00–14:00 · 16:00–20:00</p>
-      <p>Sábado y Domingo: Cerrado</p>
+    <div class="hero-right">
+      <div class="glass-card">
+        <h3>Información</h3>
+        <p><strong>Dirección:</strong><br>
+        C. Espronceda, 2<br>Linares (Jaén)</p>
+
+        <p><strong>Horario:</strong><br>
+        L-V 8:00–14:00 · 16:00–20:00<br>
+        Sáb-Dom: Cerrado</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="services" id="servicios">
+  <div class="container">
+    <h2>Servicios</h2>
+
+    <div class="services-grid">
+
+      <div class="service-card">
+        <div class="icon"></div>
+        <h3>Calderas</h3>
+        <p>Instalación, mantenimiento y reparación profesional.</p>
+      </div>
+
+      <div class="service-card">
+        <div class="icon"></div>
+        <h3>Calentadores</h3>
+        <p>Especialistas en repuestos y soluciones técnicas.</p>
+      </div>
+
+      <div class="service-card">
+        <div class="icon"></div>
+        <h3>Fontanería</h3>
+        <p>Reparaciones, instalaciones y mantenimiento integral.</p>
+      </div>
+
+      <div class="service-card">
+        <div class="icon"></div>
+        <h3>Repuestos</h3>
+        <p>Tienda física con disponibilidad inmediata.</p>
+      </div>
+
     </div>
   </div>
 </section>
 
-<section class="services">
-  <div class="wrap grid">
-    <div class="card reveal">
-      <h3>Calderas</h3>
-      <p>Instalación y reparación profesional.</p>
-    </div>
-    <div class="card reveal">
-      <h3>Calentadores</h3>
-      <p>Especialistas en repuestos.</p>
-    </div>
-    <div class="card reveal">
-      <h3>Fontanería</h3>
-      <p>Reparaciones e instalaciones.</p>
-    </div>
-    <div class="card reveal">
-      <h3>Repuestos</h3>
-      <p>Tienda física en Linares.</p>
-    </div>
-  </div>
-</section>
-
-<section class="reviews">
-  <div class="wrap">
-    <h2 class="reveal">Opiniones reales</h2>
-    <div class="carousel">
-      <div class="review">“Profesionales y conscientes de una urgencia.” — Manuel Molina</div>
-      <div class="review">“Muy agradables y orientan con opciones.” — Antonio Javier García</div>
-      <div class="review">“Trabajando con ellos desde 2019.” — Hein van Leeuwen</div>
-      <div class="review">“Puntuales y formales.” — Isolina Marín</div>
-      <div class="review">“Repuestos en Linares.” — Francisco Sierra</div>
-    </div>
-  </div>
-</section>
-
-<section class="contact" id="contacto">
-  <div class="wrap contact-box reveal">
-    <h2>¿Necesitas ayuda?</h2>
-    <a class="btn-liquid big" href="tel:686284561">686 28 45 61</a>
-    <p>C. Espronceda, 2 · Linares (Jaén)</p>
+<section class="cta">
+  <div class="container cta-box">
+    <h2>¿Necesitas una solución rápida?</h2>
+    <a class="btn-primary large" href="tel:686284561">Llamar ahora</a>
   </div>
 </section>
 
