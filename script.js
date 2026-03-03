@@ -1,4 +1,4 @@
-// Animación suave al hacer scroll
+// Scroll reveal más elegante
 const observer = new IntersectionObserver(entries => {
   entries.forEach(entry => {
     if(entry.isIntersecting){
@@ -6,11 +6,10 @@ const observer = new IntersectionObserver(entries => {
       entry.target.style.transform = "translateY(0)";
     }
   });
+},{
+  threshold:0.2
 });
 
-document.querySelectorAll(".card, .step, .info-card").forEach(el => {
-  el.style.opacity = 0;
-  el.style.transform = "translateY(40px)";
-  el.style.transition = "all .6s ease";
+document.querySelectorAll(".reveal").forEach(el=>{
   observer.observe(el);
 });
