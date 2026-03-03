@@ -1,1 +1,175 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:system-ui, sans-serif;
+}
 
+body{
+  background:#0F172A;
+  color:white;
+}
+
+.wrap{
+  width:90%;
+  max-width:1200px;
+  margin:auto;
+}
+
+.header{
+  background:#0F172A;
+  padding:20px 0;
+  position:sticky;
+  top:0;
+}
+
+.nav{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+
+.logo span{
+  color:#2563EB;
+}
+
+.hero{
+  position:relative;
+  padding:120px 0;
+  background:linear-gradient(135deg,#0F172A,#1E293B);
+}
+
+.hero-overlay{
+  position:absolute;
+  inset:0;
+  background:radial-gradient(circle at 30% 30%, rgba(37,99,235,0.2), transparent);
+}
+
+.hero-content{
+  position:relative;
+  z-index:2;
+}
+
+.hero h1{
+  font-size:42px;
+  margin-bottom:20px;
+}
+
+.hero p{
+  margin-bottom:30px;
+  color:#cbd5e1;
+}
+
+.btn{
+  background:#F97316;
+  color:white;
+  padding:12px 24px;
+  text-decoration:none;
+  border-radius:6px;
+  transition:.3s;
+  display:inline-block;
+}
+
+.btn:hover{
+  transform:translateY(-3px);
+}
+
+.btn-outline{
+  background:transparent;
+  border:1px solid #2563EB;
+  margin-left:10px;
+}
+
+.btn-small{
+  padding:8px 16px;
+}
+
+.info-card{
+  margin-top:40px;
+  background:#1E293B;
+  padding:20px;
+  border-radius:8px;
+}
+
+.services{
+  padding:80px 0;
+  background:#111827;
+}
+
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:20px;
+}
+
+.card{
+  background:#1E293B;
+  padding:30px;
+  border-radius:8px;
+  transition:.3s;
+}
+
+.card:hover{
+  transform:translateY(-5px);
+  box-shadow:0 10px 25px rgba(37,99,235,.3);
+}
+
+.trust{
+  padding:80px 0;
+}
+
+.trust ul{
+  margin-top:20px;
+  line-height:2;
+}
+
+.reviews{
+  padding:80px 0;
+  background:#111827;
+  overflow:hidden;
+}
+
+.carousel{
+  display:flex;
+  gap:40px;
+  animation:scroll 25s linear infinite;
+}
+
+.review{
+  min-width:300px;
+  background:#1E293B;
+  padding:20px;
+  border-radius:8px;
+}
+
+@keyframes scroll{
+  from{transform:translateX(0);}
+  to{transform:translateX(-50%);}
+}
+
+.process{
+  padding:80px 0;
+}
+
+.steps{
+  margin-top:30px;
+}
+
+.step{
+  margin-bottom:15px;
+  padding-left:20px;
+  border-left:3px solid #2563EB;
+}
+
+.contact{
+  padding:80px 0;
+  background:#1E293B;
+  text-align:center;
+}
+
+footer{
+  padding:20px;
+  text-align:center;
+  background:#0F172A;
+  color:#64748b;
+}
