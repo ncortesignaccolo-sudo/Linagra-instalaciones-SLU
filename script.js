@@ -149,21 +149,32 @@
 const themeToggle = document.getElementById("themeToggle");
 const themeIcon = document.querySelector(".theme-ico");
 
-themeToggle.addEventListener("click", () => {
+/* =========================
+   THEME TOGGLE (Dark / Light)
+   ========================= */
 
-  document.body.classList.toggle("light");
+const themeToggle = document.getElementById("themeToggle");
+const themeIcon = document.querySelector(".theme-ico");
 
-  if(document.body.classList.contains("light")){
-    themeIcon.textContent = "☀️";
-    localStorage.setItem("theme","light");
-  }else{
-    themeIcon.textContent = "🌙";
-    localStorage.setItem("theme","dark");
+// función para aplicar tema
+function applyTheme(theme) {
+  const isLight = theme === "light";
+
+  document.body.classList.toggle("light", isLight);
+
+  if (themeIcon) {
+    themeIcon.textContent = isLight ? "☀️" : "🌙";
   }
 
-});
-
-if(localStorage.getItem("theme") === "light"){
-  document.body.classList.add("light");
-  themeIcon.textContent = "☀️";
+  localStorage.setItem("theme", isLight ? "light" : "dark");
 }
+
+// cargar tema guardado al abrir la página
+const savedTheme = localStorage.getItem("theme") || "dark";
+applyTheme(savedTheme);
+
+// cambiar tema al hacer click
+themeToggle?.addEventListener("click", () => {
+  const nextTheme = document.body.classList.contains("light") ? "dark" : "light";
+  applyTheme(nextTheme);
+});
