@@ -787,3 +787,6 @@ body.light .fine{
 body.light .hero-card .fine{
   color: var(--muted) !important;
 }
+body.light .hero-card .fine{
+  color: var(--muted) !important;
+}
