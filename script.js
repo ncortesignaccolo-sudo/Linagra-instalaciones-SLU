@@ -146,3 +146,24 @@
   updateProgress();
   window.addEventListener("scroll", updateProgress, { passive: true });
   window.addEventListener("resize", updateProgress);
+const themeToggle = document.getElementById("themeToggle");
+const themeIcon = document.querySelector(".theme-ico");
+
+themeToggle.addEventListener("click", () => {
+
+  document.body.classList.toggle("light");
+
+  if(document.body.classList.contains("light")){
+    themeIcon.textContent = "☀️";
+    localStorage.setItem("theme","light");
+  }else{
+    themeIcon.textContent = "🌙";
+    localStorage.setItem("theme","dark");
+  }
+
+});
+
+if(localStorage.getItem("theme") === "light"){
+  document.body.classList.add("light");
+  themeIcon.textContent = "☀️";
+}
