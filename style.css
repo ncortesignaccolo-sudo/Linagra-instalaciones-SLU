@@ -495,3 +495,15 @@ a:hover{ text-decoration: underline; }
   .callout{ flex-direction: column; align-items: flex-start; }
   .cards{ grid-template-columns: 1fr; }
 }
+.scroll-progress{
+  height: 3px;
+  background: rgba(255,255,255,.10);
+}
+body.light .scroll-progress{
+  background: rgba(0,0,0,.08);
+}
+.scroll-progress-bar{
+  height: 100%;
+  width: 0%;
+  background: linear-gradient(90deg, rgba(125,211,252,.95), rgba(167,139,250,.95));
+}
