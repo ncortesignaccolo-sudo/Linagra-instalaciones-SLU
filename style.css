@@ -786,3 +786,6 @@ body.light .btn-primary{
 body.light .fine{
   color: #475569 !important;
 }
+body.light .hero-card .fine{
+  color: var(--muted) !important;
+}
