@@ -568,3 +568,17 @@ body.light .site-header{
 body.light .card{
   background: rgba(255,255,255,.9);
 }
+/* Transición suave entre temas */
+body,
+.site-header,
+.card,
+.btn,
+.section,
+.hero,
+.hero-bg {
+  transition:
+    background-color 0.35s ease,
+    color 0.35s ease,
+    border-color 0.35s ease,
+    box-shadow 0.35s ease;
+}
