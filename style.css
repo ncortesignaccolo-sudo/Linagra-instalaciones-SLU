@@ -27,12 +27,30 @@ html{ scroll-behavior: smooth; }
 body{
   margin: 0;
   font-family: var(--font);
-  background: radial-gradient(1200px 800px at 70% -10%, rgba(125,211,252,.18), transparent 60%),
-              radial-gradient(1000px 700px at 10% 20%, rgba(167,139,250,.14), transparent 55%),
-              var(--bg);
+  background-color: var(--bg);
   color: var(--text);
+  position: relative;
+}
+/* fondo luminoso animado */
+body::before{
+  content:"";
+  position: fixed;
+  inset:0;
+  z-index:-1;
+  pointer-events:none;
+
+  background:
+    radial-gradient(1200px 800px at 70% -10%, rgba(125,211,252,.18), transparent 60%),
+    radial-gradient(1000px 700px at 10% 20%, rgba(167,139,250,.14), transparent 55%);
+
+  opacity:1;
+  transition:opacity .35s ease;
 }
 
+/* modo claro */
+body.light::before{
+  opacity:.55;
+}
 a{ color: inherit; text-decoration: none; }
 a:hover{ text-decoration: underline; }
 
