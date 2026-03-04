@@ -350,7 +350,7 @@ a:hover{ text-decoration: underline; }
   gap: .65rem;
 }
 .fine{
-  color: var(--muted);
+  color: var(--muted) !important;
   font-size: .92rem;
 }
 /* Services */
@@ -674,7 +674,7 @@ body.light{
   --panel: rgba(255,255,255,.92);
   --panel-2: rgba(255,255,255,.96);
   --text: #0f172a;               /* texto principal */
-  --muted: #334155;              /* texto secundario */
+   --muted: #475569;               /* texto secundario */
   --line: rgba(15,23,42,.14);
 
   --accent: #2563eb;
