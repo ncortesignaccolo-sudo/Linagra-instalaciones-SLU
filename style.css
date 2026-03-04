@@ -782,3 +782,7 @@ body.light .btn-primary{
   border-color: rgba(37,99,235,.25);
   background: linear-gradient(135deg, rgba(37,99,235,.16), rgba(79,70,229,.12));
 }
+/* Texto inferior de la tarjeta de información */
+body.light .fine{
+  color: #475569 !important;
+}
