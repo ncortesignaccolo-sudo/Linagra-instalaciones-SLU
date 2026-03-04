@@ -667,3 +667,118 @@ body.light .btn-primary{
   border-color: rgba(37,99,235,.28);
   background: linear-gradient(135deg, rgba(37,99,235,.16), rgba(79,70,229,.12));
 }
+/* =========================================
+   LIGHT MODE OVERRIDES (pegar al FINAL)
+   ========================================= */
+
+body.light{
+  --bg: #eef2f7;                 /* blanco suave */
+  --panel: rgba(255,255,255,.92);
+  --panel-2: rgba(255,255,255,.96);
+  --text: #0f172a;               /* texto principal */
+  --muted: #334155;              /* texto secundario */
+  --line: rgba(15,23,42,.14);
+
+  --accent: #2563eb;
+  --accent-2: #4f46e5;
+}
+
+/* Fondo claro más “limpio” */
+body.light::before{
+  opacity: .35;
+  filter: saturate(.8);
+}
+
+/* Header */
+body.light .site-header{
+  background: rgba(255,255,255,.82);
+  border-bottom: 1px solid rgba(15,23,42,.10);
+}
+
+/* Marca (logo) */
+body.light .brand-mark{
+  border-color: rgba(15,23,42,.12);
+}
+body.light .brand-text small{
+  color: rgba(15,23,42,.60);
+}
+
+/* Navegación (aquí suele quedarse en blanco) */
+body.light .nav-menu a{
+  color: rgba(15,23,42,.88) !important;
+}
+body.light .nav-menu a:hover{
+  background: rgba(15,23,42,.06);
+}
+
+/* Botón hamburguesa */
+body.light .nav-toggle{
+  border-color: rgba(15,23,42,.16);
+  background: rgba(15,23,42,.04);
+}
+body.light .hamburger,
+body.light .hamburger::before,
+body.light .hamburger::after{
+  background: rgba(15,23,42,.85);
+}
+
+/* Botón del tema */
+body.light .theme-toggle{
+  border-color: rgba(15,23,42,.16);
+  background: rgba(15,23,42,.04);
+}
+
+/* Tarjetas: que “se noten” más */
+body.light .card{
+  background: rgba(255,255,255,.95);
+  border: 1px solid rgba(15,23,42,.10);
+  box-shadow: 0 16px 45px rgba(15,23,42,.10);
+}
+
+/* Secciones alternas (más contraste) */
+body.light .section-alt{
+  background: rgba(15,23,42,.03);
+  border-block: 1px solid rgba(15,23,42,.08);
+}
+
+/* Textos que se te quedan blancos */
+body.light .pill,
+body.light .ticks,
+body.light .fine,
+body.light .mini,
+body.light .contact-list,
+body.light .checklist{
+  color: rgba(15,23,42,.78) !important;
+}
+
+body.light .section-head p,
+body.light .lead,
+body.light .service p,
+body.light .cta p{
+  color: rgba(15,23,42,.65) !important;
+}
+
+/* Footer y “volver arriba” */
+body.light .site-footer{
+  background: rgba(255,255,255,.70);
+  border-top: 1px solid rgba(15,23,42,.10);
+}
+body.light .to-top{
+  border-color: rgba(15,23,42,.14);
+  background: rgba(15,23,42,.04);
+  color: rgba(15,23,42,.85);
+}
+
+/* Botones en claro */
+body.light .btn{
+  border-color: rgba(15,23,42,.16);
+  background: rgba(15,23,42,.04);
+  color: rgba(15,23,42,.88);
+}
+body.light .btn:hover{
+  background: rgba(15,23,42,.07);
+}
+body.light .btn-primary{
+  border-color: rgba(37,99,235,.25);
+  background: linear-gradient(135deg, rgba(37,99,235,.16), rgba(79,70,229,.12));
+}
