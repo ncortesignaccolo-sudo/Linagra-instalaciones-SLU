@@ -20,20 +20,17 @@
       toggle.setAttribute("aria-expanded", String(open));
     });
 
-    // Cerrar al clicar un enlace
     menu.addEventListener("click", (e) => {
       const a = e.target.closest("a");
       if (a && a.getAttribute("href")?.startsWith("#")) closeMenu();
     });
 
-    // Cerrar al clicar fuera
     document.addEventListener("click", (e) => {
       if (!menu.classList.contains("is-open")) return;
       if (e.target.closest(".nav")) return;
       closeMenu();
     });
 
-    // Cerrar con ESC
     document.addEventListener("keydown", (e) => {
       if (e.key === "Escape") closeMenu();
     });
@@ -57,22 +54,10 @@
 
   // Carrusel de opiniones
   const testimonials = [
-    {
-      quote: "“Todos unos profesionales y conscientes de una urgencia. Me han sorprendido muy gratamente.”",
-      who: "— Manuel Molina",
-    },
-    {
-      quote: "“Personas agradables que orientan y dan opciones. En estos tiempos eso no tiene precio.”",
-      who: "— Antonio Javier García",
-    },
-    {
-      quote: "“Trabajando con Linagra desde 2019. Renovación de calentador y más trabajos en mi vivienda.”",
-      who: "— Hein van Leeuwen",
-    },
-    {
-      quote: "“Buenos profesionales, puntuales y formales. Recomendables 100%.”",
-      who: "— Isolina Marín",
-    },
+    { quote: "“Todos unos profesionales y conscientes de una urgencia. Me han sorprendido muy gratamente.”", who: "— Manuel Molina" },
+    { quote: "“Personas agradables que orientan y dan opciones. En estos tiempos eso no tiene precio.”", who: "— Antonio Javier García" },
+    { quote: "“Trabajando con Linagra desde 2019. Renovación de calentador y más trabajos en mi vivienda.”", who: "— Hein van Leeuwen" },
+    { quote: "“Buenos profesionales, puntuales y formales. Recomendables 100%.”", who: "— Isolina Marín" },
   ];
 
   const quoteEl = document.getElementById("quote");
@@ -127,13 +112,9 @@
     render();
     restart();
   }
+  nextBtn?.addEventListener("click", () => { next(); restart(); });
+  prevBtn?.addEventListener("click", () => { prev(); restart(); });
 
-  if (nextBtn) nextBtn.addEventListener("click", () => { next(); restart(); });
-  if (prevBtn) prevBtn.addEventListener("click", () => { prev(); restart(); });
-
-  // Extra: click rápido a llamar si quisieras usarlo en algún sitio
-  window.linagraCall = () => window.location.href = `tel:${phone}`;
-})();
   // Progreso de scroll
   const progress = document.getElementById("scrollProgress");
   const updateProgress = () => {
@@ -146,35 +127,28 @@
   updateProgress();
   window.addEventListener("scroll", updateProgress, { passive: true });
   window.addEventListener("resize", updateProgress);
-const themeToggle = document.getElementById("themeToggle");
-const themeIcon = document.querySelector(".theme-ico");
 
-/* =========================
-   THEME TOGGLE (Dark / Light)
-   ========================= */
+  /* =========================
+     THEME TOGGLE (Dark / Light)
+     ========================= */
+  const themeToggle = document.getElementById("themeToggle");
+  const themeIcon = document.querySelector(".theme-ico");
 
-const themeToggle = document.getElementById("themeToggle");
-const themeIcon = document.querySelector(".theme-ico");
-
-// función para aplicar tema
-function applyTheme(theme) {
-  const isLight = theme === "light";
-
-  document.body.classList.toggle("light", isLight);
-
-  if (themeIcon) {
-    themeIcon.textContent = isLight ? "☀️" : "🌙";
+  function applyTheme(theme) {
+    const isLight = theme === "light";
+    document.body.classList.toggle("light", isLight);
+    if (themeIcon) themeIcon.textContent = isLight ? "☀️" : "🌙";
+    localStorage.setItem("theme", isLight ? "light" : "dark");
   }
 
-  localStorage.setItem("theme", isLight ? "light" : "dark");
-}
+  const savedTheme = localStorage.getItem("theme") || "dark";
+  applyTheme(savedTheme);
 
-// cargar tema guardado al abrir la página
-const savedTheme = localStorage.getItem("theme") || "dark";
-applyTheme(savedTheme);
+  themeToggle?.addEventListener("click", () => {
+    const nextTheme = document.body.classList.contains("light") ? "dark" : "light";
+    applyTheme(nextTheme);
+  });
 
-// cambiar tema al hacer click
-themeToggle?.addEventListener("click", () => {
-  const nextTheme = document.body.classList.contains("light") ? "dark" : "light";
-  applyTheme(nextTheme);
-});
+  // Extra: click rápido a llamar si quisieras usarlo en algún sitio
+  window.linagraCall = () => (window.location.href = `tel:${phone}`);
+})();
