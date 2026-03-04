@@ -134,3 +134,15 @@
   // Extra: click rápido a llamar si quisieras usarlo en algún sitio
   window.linagraCall = () => window.location.href = `tel:${phone}`;
 })();
+  // Progreso de scroll
+  const progress = document.getElementById("scrollProgress");
+  const updateProgress = () => {
+    if (!progress) return;
+    const doc = document.documentElement;
+    const max = doc.scrollHeight - doc.clientHeight;
+    const pct = max > 0 ? (doc.scrollTop / max) * 100 : 0;
+    progress.style.width = `${pct}%`;
+  };
+  updateProgress();
+  window.addEventListener("scroll", updateProgress, { passive: true });
+  window.addEventListener("resize", updateProgress);
