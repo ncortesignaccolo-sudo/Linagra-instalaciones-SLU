@@ -15,12 +15,12 @@
   --font: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
 }
 body.light{
-  --bg: #f6f7fb;
-  --panel: rgba(0,0,0,.05);
-  --panel-2: rgba(0,0,0,.08);
-  --text: #0f172a;
-  --muted: #475569;
-  --line: rgba(0,0,0,.1);
+  --bg: #e8edf5;
+  --panel: rgba(255,255,255,.85);
+  --panel-2: rgba(255,255,255,.92);
+  --text: #111827;
+  --muted: #374151;
+  --line: rgba(0,0,0,.15);
 }
 *{ box-sizing: border-box; }
 html{ scroll-behavior: smooth; }
@@ -559,4 +559,12 @@ body.light .scroll-progress{
 
 .theme-toggle:hover{
   background:rgba(255,255,255,.12);
+}
+body.light .site-header{
+  background: rgba(255,255,255,.85);
+  backdrop-filter: blur(10px);
+}
+
+body.light .card{
+  background: rgba(255,255,255,.9);
 }
